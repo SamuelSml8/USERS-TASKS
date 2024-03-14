@@ -88,5 +88,35 @@ export const logout = (req, res) => {
   res.cookie("token", "", {
     expires: new Date(0),
   });
-  return res.sendStatus(200);
+  return res.status(200).json({
+    ok: true,
+    message: "User logged out successfully",
+    data: null,
+  });
+};
+
+export const profile = async (req, res) => {
+  const userFound = await User.findById(req.user.id);
+
+  if (!userFound) {
+    return res.status(400).json({
+      ok: false,
+      message: "User not found",
+      data: null,
+    });
+  }
+
+  return res.json({
+    ok: true,
+    message: "User found",
+    data: {
+      id: userFound._id,
+      username: userFound.username,
+      email: userFound.email,
+      createAt: userFound.createdAt,
+      updateAt: userFound.updatedAt,
+    },
+  });
+
+  res.send("profile");
 };
