@@ -5,6 +5,8 @@ export const getTasks = async (req, res) => {
     const tasks = await Task.find({
       user: req.user.id,
     }).populate("user");
+    // res.status(200).json(tasks);
+
     res.status(200).json({
       ok: true,
       message: "All tasks",
