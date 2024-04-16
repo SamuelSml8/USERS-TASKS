@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useTasks } from "../context/TaskContext";
+import TaskCard from "../components/TaskCard";
 
 function TasksPage() {
   const { getTasks, tasks } = useTasks();
@@ -7,19 +8,16 @@ function TasksPage() {
   useEffect(() => {
     getTasks();
   }, []);
+  console.log(tasks);
 
-  // Hacer funcional
   if (tasks.length === 0) {
     return <h1>No tasks</h1>;
   }
 
   return (
-    <div>
-      {tasks.data.map((task) => (
-        <div key={task._id}>
-          <h1>{task.title}</h1>
-          <p>{task.description}</p>
-        </div>
+    <div className="grid grid-cols-3 gap-2">
+      {tasks.map((task) => (
+        <TaskCard key={task._id} task={task} />
       ))}
     </div>
   );

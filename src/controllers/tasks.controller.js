@@ -7,11 +7,7 @@ export const getTasks = async (req, res) => {
     }).populate("user");
     // res.status(200).json(tasks);
 
-    res.status(200).json({
-      ok: true,
-      message: "All tasks",
-      data: tasks,
-    });
+    res.status(200).json(tasks);
   } catch (error) {
     console.log("Error getting all tasks", error);
     res.status(500).json({
