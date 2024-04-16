@@ -10,12 +10,14 @@ import TaskFormPage from "./pages/TaskFormPage.jsx";
 import ProfilePage from "./pages/ProfilePage.jsx";
 
 import ProtectedRoute from "./ProtectedRoute.jsx";
+import Navbar from "./components/Navbar.jsx";
 
 function App() {
   return (
     <AuthProvider>
       <TaskProvider>
         <BrowserRouter>
+          <Navbar />
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/login" element={<LoginPage />} />
