@@ -29,67 +29,11 @@ The project is organized in two main directories:
 
 ### Backend (src)
 
-src/
-│.
-├── controllers/ # Drivers to handle HTTP requests
-│ ├── auth.controller.js
-│ └── tasks.controller.js
-│.
-├── libs/ # Libraries and utilities
-│ └── jwt.js
-│.
-├── middlewares/ # Middlewares for intercepting and processing HTTP requests
-│ ├── validateToken.js
-│ └── validator.middleware.js
-│.
-├── models/ # Database data models
-│ ├── task.model.js
-│ └── user.model.js
-│.
-├── routes/ # Route definitions for each resource
-│ ├── auth.routes.js
-│ └── tasks.routes.js
-│.
-├── schemas/ # Data validation schemes
-│ ├── auth.schema.js
-│ └── task.schema.js
-│.
-├── app.js # Main application configuration
-├── config.js # Project configuration
-├── db.js # Database connection
-└── index.js # Main entry point
+![image](https://github.com/SamuelSml8/USERS-TASKS/assets/127326262/33841793-4c64-43eb-b231-3fa3cc0e8149)
 
 ### Frontend (client/src).
 
-The frontend is organized as follows:
-
-client/
-│.
-└── src/
-│.
-├── api/ # Configuration files and functions for making API calls
-│ ├── auth.js
-│ └── tasks.js
-│.
-├── components/ # Reusable React components
-│ ├── Navbar.jsx
-│ └── TaskCard.jsx
-│.
-├── context/ # React contexts for global state management
-│ ├── AuthContext.jsx
-│ └── TaskContext.jsx
-│.
-├── pages/ # Application page components
-│ ├── HomePage.jsx
-│ ├── LoginPage.jsx
-│ ├── ProfilePage.jsx
-│ ├── RegisterPage.jsx
-│ ├── TaskFormPage.jsx
-│ └── TasksPage.jsx
-│.
-├── app.jsx # Main component
-├── ProtectedRoute.jsx # Component to protected routes
-└── main.jsx # Main entry point of the application 
+![image](https://github.com/SamuelSml8/USERS-TASKS/assets/127326262/cf8aef8a-df8c-4230-9001-9b0fcdb3b7b0)
 
 ## Contact
 
