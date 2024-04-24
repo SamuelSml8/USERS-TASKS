@@ -37,6 +37,6 @@ The project is organized in two main directories:
 
 ## Contact
 
-If you want to contact me, here are my contact details
-Email: veramirandasamuel6@gmail.com
-WhatsApp: 3126621145
+If you want to contact me, here are my contact details.
+1. **Email:** veramirandasamuel6@gmail.com
+2. **WhatsApp:** 3126621145
